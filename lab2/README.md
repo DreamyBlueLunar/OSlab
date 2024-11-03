@@ -1,6 +1,6 @@
 # lab2 系统调用
 ## 实验过程中遇见的困难
-#### 挂载hdc文件夹失败
+#### 挂载hdc文件夹失败 (WSL环境下会出这个问题，换成Linux虚拟机或者物理机就没问题)
 在oslab目录下执行命令：
 
     sudo ./mount-hdc
@@ -48,5 +48,5 @@
                 #define __LIBRARY__
                 #include <unistd.h>
                 _syscallN宏展开系统调用，提供用户态的系统调用接口（参数数目确定具体宏）
-        8. 挂载hdc文件夹，在 hdc/usr/include/unistd.h 这个头文件中新增系统调用号，同步骤2
+        8. 挂载hdc文件夹，在 hdc/usr/include/unistd.h 这个头文件中新增系统调用号，同步骤2（这一步还是挺关键的）
 
